@@ -1,7 +1,7 @@
 **Overview:**
-- This script logs onto the Teams backend as an administrator of a given team, and gets a list of the groups to which the admin is a member.
+- This script logs onto the Teams backend using the account of a group administrator, and gets a list of the groups to which the admin is a member.
 - It requests that the user indicate to which of those groups the users should be added.
-- The script then accepts a list of users to be added to that team in bulk.
+- The script then accepts a list of users to be added to that team in bulk (text file, line-seperated)
 - Only the administrator of a Team can add members in bulk; administrators cannot see or query Teams of which they are not a member.
 
 **Prerequisites:**
