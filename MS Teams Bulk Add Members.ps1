@@ -30,7 +30,6 @@ $Group_Info_Array += $GroupInfo
 $incrementKey++
 }
 
-
 do{
 #Solict input from the user regarding to which Team new members should be added
 try
