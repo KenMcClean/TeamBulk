@@ -1,4 +1,4 @@
-﻿$getAdminID = read-host "Enter the email address of the group administrator"
+$getAdminID = read-host "Enter the email address of the group administrator"
 #The person adding members to the group must be an admin of the group
 
 $Group_Info_Array = @()
@@ -92,4 +92,4 @@ exit
 }
 exit
 #Exit without closing the window, after users have been added to the group
-#>
+
