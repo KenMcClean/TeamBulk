@@ -5,9 +5,9 @@
 - Only the administrator of a Team can add members in bulk; administrators cannot see or query Teams of which they are not a member.
 
 **Prerequisites:**
-You must first install the PowerShell Teams module by running this command in an elevated PowerShell window:
+- You must first install the PowerShell Teams module by running this command in an elevated PowerShell window:
 *Install-Module -Name MicrosoftTeams -RequiredVersion 1.1.6* 
-The person adding members to a group must themselves be an admin of that group
+- The person adding members to a group must themselves be an admin of that group
 
 **Dependencies:**
 The script expects to be fed a list of persons to be added to the group. These users must be identified USING THEIR EMAIL ADDRESSES
