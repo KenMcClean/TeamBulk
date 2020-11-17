@@ -43,7 +43,7 @@ while(($groupSelect -notmatch "^[1-5]?[0-9]$") -or ($groupSelect -gt $Group_Info
 $groupSelect -= 1
 #reduce the selection by 1 to account for an off-by-1 error
 
-write-host "`r`nSelect a text file containing the email addresses of the users to be added"
+write-host "`r`nSelect a text file containing the email addresses of the users to be added:"
 $dialog = New-Object -TypeName System.Windows.Forms.OpenFileDialog
 #Initiate a Windows File Selection object
 
@@ -69,7 +69,7 @@ if ($result = 'OK')
 do{
 #Solict input from the user, confirming that they want to make these changes
 try
-{$confirmation = read-host "Are you sure you want to add these users to ",$Group_Info_Array[$groupSelect].GroupName,"(Y/N)?"
+{$confirmation = read-host "`r`nAre you sure you want to add these users to ",$Group_Info_Array[$groupSelect].GroupName,"(Y/N)?"
 }
 catch{"Please enter Y or N"}
 }
@@ -80,14 +80,14 @@ if($confirmation -eq "Y"){
 foreach($groupMember in $groupMembers){
 write-host "Adding user $groupMember to" $Group_Info_Array[$groupSelect].GroupName, $Group_Info_Array[$groupSelect].groupID
 #Tell the user what is happening
-#add-teamuser -GroupId $Group_Info_Array[$groupSelect].GroupID -user $groupMember
+add-teamuser -GroupId $Group_Info_Array[$groupSelect].GroupID -user $groupMember
 #Make the changes
 
 }
 }
 else
 {
-write-host "Exiting without making changes"
+write-host "`r`nExiting without making changes"
 exit
 #Exit without making changes, and without closing the window
 }
