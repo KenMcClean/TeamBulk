@@ -2,7 +2,7 @@ $getAdminID = read-host "Enter the email address of the group administrator"
 #The person adding members to the group must be an admin of the group
 
 $Group_Info_Array = @()
-#Declare a hash table in which the group values will be stored
+#Declare an array in which the group values will be stored
 
 $incrementKey = 1
 
@@ -11,6 +11,7 @@ connect-microsoftteams -AccountId $getAdminID
 
 $userGroups = get-team -User $getAdminID | select-object groupid,displayname
 #This gets a list of the teams that the admin is the member of, as well as the group ID of each team
+#We add members to a team using the group ID of the team, rather than the descriptive name
 
 Write-host "`r`nThe administrator is a member of these groups:"
 
